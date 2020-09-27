@@ -16,8 +16,8 @@ public class MyLockTest {
 
     public static void main(String[] args) {
         final int totalThread = 20;
-//        final AqsLock sync = new AqsLock();
-
+        // final AqsLock sync = new AqsLock();
+        // 阿里规约 - 手动创建线程
         ExecutorService executorService = Executors.newCachedThreadPool();
         for (int i = 0; i < totalThread; i++) {
             executorService.execute(() -> {
